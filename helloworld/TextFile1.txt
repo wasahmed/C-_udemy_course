@@ -1,0 +1,6 @@
+﻿
+####Overflowing#####
+byte number = 255;
+number = number + 1; // 0
+therefore use checked{} which will throw an exception 
+
