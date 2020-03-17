@@ -97,11 +97,81 @@ namespace helloworld
             //Console.WriteLine(flags[2]);
             //can use string arrays
 
+            //multi dimensional arrays -rectangular and jagged(array of arrays)
+            //rectangular
+            //var matrix = new int[3, 5];//can make it 3D
+
+            ////jagged
+            //var array = new int[3][];
+
+            //int[] numbers = new int[] { 3, 5, 6, 1, 7 };
+            //Console.WriteLine(numbers.Length);//static method
+            //Console.WriteLine(Array.IndexOf(numbers, 6));
+            //Array.Clear(numbers, 0, 2);
+            //int[] another = new int[3];
+            //Array.Copy(numbers, another, 3);
+            //Array.Sort(numbers);
+            //Array.Reverse(numbers);
+            //Console.WriteLine(numbers);
+
+
+
             //###########Strings##################################
             //sequence of characters
             //immutable
             //format strings
             //verbatim strings
+            //class
+            //methods - formatting, searching, substrings, nullchecking, splitting, converting(parse,convert)
+            //var name = "john snow ";
+            //name.Trim();
+            //name.ToUpper();
+            //var index = name.IndexOf(' ');
+            //var firstname = name.Substring(0, index);
+            //var lastName = name.Substring(index + 1);
+            //var easierway = name.Split(' ');//than assign first and lastname to an element of array
+            //name.Replace("john", "joe");
+            //if (String.IsNullOrWhiteSpace("    "))
+            //    Console.WriteLine("invalid");
+            //var str = "25";
+            //Convert.ToByte(str);
+
+            //float price = 29.95f;
+            //price.ToString("C");
+
+            //var sentence = "this is a really really long sentence ";
+            //const int maxlen = 10;
+            //if (sentence.Length < maxlen)
+            //    Console.WriteLine(sentence);
+            //else
+            //{
+            //    var words = sentence.Split(' ');
+            //    var totalCharacters = 0;
+            //    var summaryWords = new List<string>();
+            //    foreach(var word in words)
+            //    {
+            //        summaryWords.Add(word);
+            //        totalCharacters += word.Length + 1;
+            //        if (totalCharacters > maxlen)
+            //            break;
+            //    }
+            //    var summary = String.Join(" ", summaryWords) + "...";
+            //    Console.WriteLine(summary);
+            //}
+
+            //String builder -append, insert, remove, replace, clear
+            //no searching methods
+            //var builder = new StringBuilder("Hello World");
+            //builder.Append('*', 10)
+            //       .AppendLine()//chained together
+            //       .Append("Header")
+            //       .AppendLine();
+
+            //builder.Replace('*', '#');
+
+            //builder.Remove(0, 10);
+            //builder.Insert(0, new string('-', 10));
+            
 
             //#############Enum##################################
             //name value pairs
@@ -155,16 +225,86 @@ namespace helloworld
             //    Console.WriteLine(letter);
             //}
 
-            while (true)
-            {
-                Console.WriteLine("type here: ");
-                var input = Console.ReadLine();
+            //while (true)
+            //{
+            //    Console.WriteLine("type here: ");
+            //    var input = Console.ReadLine();
 
-                if (!String.IsNullOrWhiteSpace(input))
-                {
-                    Console.WriteLine("@Echo ");
-                }
-            }
+            //    if (!String.IsNullOrWhiteSpace(input))
+            //    {
+            //        Console.WriteLine("@Echo " + input);
+            //        continue;
+            //    }
+            //    break;
+            //}
+
+            //#############Random###################################
+            //var random = new Random();
+            //const int passwordlen = 10;
+            //var buffer = new char[passwordlen];
+            //for (var i = 0; i < 10; i++)
+            //    buffer[i] = ((char)('a' + random.Next(0, 26)));
+            //var password = new string(buffer);
+
+            //Console.WriteLine(password);
+
+            //############Exercises#################################
+            //while (true)
+            //{
+            //    Console.WriteLine("Enter a number: ");
+            //    var number = Console.ReadLine();
+            //    if ((Convert.ToInt32(number) >= 1) && (Convert.ToInt32(number) <= 10))
+            //    {
+            //        Console.WriteLine("Valid");
+            //        continue;
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("Invalid");
+            //        continue;
+            //    }
+            //}
+
+            //##########Lists##############################
+            //dynamic size
+            //generic type
+            //var numbers = new List<int>() { 1, 2, 3, 4, 5, 6 };
+            //foreach (var item in numbers)
+            //    Console.WriteLine(item);
+            //numbers.Add(7);//cant do this with arrays
+            //numbers.AddRange(new int[2] { 9, 8});
+            //foreach (var number in numbers)
+            //    Console.WriteLine(number);
+
+            //IndexOf
+            //LastIndexOf
+            //Count
+            //Remove can use in for loop
+            //Clear
+
+            //##############DateTime##########################
+            //var dateTime = new DateTime(2015, 1, 1);
+            //var now = DateTime.Now;
+            //var today = DateTime.Today;
+
+            //Console.WriteLine(now.Hour);//minute
+            ////many formats can be use look at the methods of the object
+
+            //var tommorow = now.AddDays(1);
+            //var yesterday = now.AddDays(-1);
+
+            //###########TimeSpan##############################
+            //var timeSpan = new TimeSpan(1, 2 ,3);//hms
+            //var timeSpan2 = TimeSpan.FromHours(1);
+
+            //var start = DateTime.Now;
+            //var end = DateTime.Now.AddMinutes(2);
+            //var duration = end - start;
+
+            //timeSpan.ToString()
+            //timeSpan.Parse("01:02:03")
+
+
         }
     }
 }
