@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 
 namespace helloworld
 {
@@ -171,7 +172,7 @@ namespace helloworld
 
             //builder.Remove(0, 10);
             //builder.Insert(0, new string('-', 10));
-            
+
 
             //#############Enum##################################
             //name value pairs
@@ -304,7 +305,29 @@ namespace helloworld
             //timeSpan.ToString()
             //timeSpan.Parse("01:02:03")
 
+            //#############Files###########################
+            //system.io namespace
+            //File, FileInfo, Directory, Directory Info, Path -classes
+            //File(static methods) and FileInfo(instance methods) demo
 
+
+            //###########Debugging##########################
+            //breakpoint - f9 
+            //run with debug -f5
+            //f10 -step over
+            //step into - f11
+            //step out shift f11
+            //debug/windows/watch/watch one
+
+            //#########Palindrome###########################
+            var str = "aba";
+            char[] rev = str.ToCharArray();
+            Array.Reverse(rev);
+            var revstr = new String(rev);
+            if (String.Equals(str, revstr))
+                Console.WriteLine("palindrome");
+            else
+                Console.WriteLine("not a palindrome");
         }
     }
 }
